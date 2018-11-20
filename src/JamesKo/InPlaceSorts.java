@@ -27,13 +27,9 @@ public class InPlaceSorts {
 
     public static void bubbleSort(String[] arr)
     {
-        //This will loop through the entire array, ensuring all the indexes are checked
         for (int a = 0; a < arr.length; a++)
         {
-            //This will loop through for each individual number/index
             for (int b = 0; b < arr.length - a - 1; b++) {
-                //If the number is greater than the next
-                // number, then they will switch
                 if (arr[b].compareTo(arr[b+1]) > 0) {
                     swapString(arr, b, b + 1);
                 }
@@ -44,20 +40,16 @@ public class InPlaceSorts {
 
     public static void selectionSort(double[] arr)
     {
-        //Loops through unsorted array
         for(int a = 0; a < arr.length - 1; a++)
         {
             int min = a;
-            //Compares arr[i] with all other indexes
             for(int b = a + 1; b<arr.length; b++)
             {
-                //Sets min to the index with a number smaller the index it was currently at
                 if(arr[b] < arr[min])
                 {
                     min = b;
                 }
             }
-            //Swaps the two indexes, unless it is at the same position
             if(min != a)
             {
                 swapDouble(arr, a, min);
