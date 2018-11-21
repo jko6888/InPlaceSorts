@@ -12,6 +12,7 @@ public class Runner {
         time = System.currentTimeMillis() - time;
         System.out.println("Time taken: " + time * 0.001 + " seconds");
         System.out.println(" ");
+
         double[] arrDouble = InPlaceSorts.randomDouble(500);
         time = System.currentTimeMillis();
         System.out.println(Arrays.toString(arrDouble) + "\n Loading...");
@@ -20,6 +21,7 @@ public class Runner {
         time = System.currentTimeMillis() - time;
         System.out.println("Time taken: " + time * 0.001 + " seconds");
         System.out.println(" ");
+
         String[] arrString = InPlaceSorts.randomStringArr(500, 4);
         time = System.currentTimeMillis();
         System.out.println(Arrays.toString(arrString) + "\n Loading..");
@@ -27,5 +29,11 @@ public class Runner {
         System.out.println(Arrays.toString(arrString) + "\n Finished");
         time = System.currentTimeMillis() - time;
         System.out.println("Time taken: " + time * 0.001 + " seconds");
+        System.out.println(" ");
+
+        int[] mergeArr = InPlaceSorts.randomNum(50000);
+        System.out.println(Arrays.toString(mergeArr) + "\n Processing...");
+        InPlaceSorts.mergeSort(mergeArr);
+        System.out.println(Arrays.toString(mergeArr) + "\n Done");
     }
 }
