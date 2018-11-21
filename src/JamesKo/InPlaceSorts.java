@@ -20,7 +20,7 @@ public class InPlaceSorts {
     {
         String temp = arr[a];
         arr[a] = arr[b];
-        arr[a] = temp;
+        arr[b] = temp;
     }
 
 
@@ -58,38 +58,40 @@ public class InPlaceSorts {
         }
     }
 
-    public static void insertionSort(int[] num){
-        for(int a = 1; a < num.length; a++) {
-            int mainValue = num[a];
+    public static void insertionSort(int[] arr){
+        for(int a = 1; a < arr.length; a++) {
+            int mainValue = arr[a];
             int b = a-1;
 
-            while (b>=0 && num[b] > mainValue)
+            while (b>=0 && arr[b] > mainValue)
             {
-                num[b+1] = num[b];
+                arr[b+1] = arr[b];
                 b = b-1;
             }
-            num[b+1] = mainValue;
+            arr[b+1] = mainValue;
         }
     }
 
-
-    public static int[] randomNum(int count) {
-        int[] num = new int[count];
-        for (int a = 0; a < num.length; a++) {
-            num[a] = (int) (Math.random() * 10000);
+    public static int[] randomNum(int count)
+    {
+        int[] arr = new int[count];
+        for(int a = 0; a < arr.length; a++)
+        {
+            arr[a] = (int)(Math.random()*10000);
         }
-        return num;
+        return arr;
     }
 
     public static double[] randomDouble(int count)
     {
         double[] arr = new double[count];
-        for(int i = 0; i < arr.length; i++)
+        for(int a = 0; a < arr.length; a++)
         {
-            arr[i] = Math.random()*10000.0;
+            arr[a] = Math.random()*10000.0;
         }
         return arr;
     }
+
     public static String[] randomStringArr(int num, int length)
     {
         String [] arr = new String [num];
@@ -109,3 +111,4 @@ public class InPlaceSorts {
         return arr;
     }
 }
+
