@@ -31,9 +31,14 @@ public class Runner {
         System.out.println("Time taken: " + time * 0.001 + " seconds");
         System.out.println(" ");
 
-        int[] mergeArr = InPlaceSorts.randomNum(50000);
-        System.out.println(Arrays.toString(mergeArr) + "\n Processing...");
+        int[] mergeArr = InPlaceSorts.randomNum(10);
+        System.out.println(Arrays.toString(mergeArr) + "\n Loading...");
         InPlaceSorts.mergeSort(mergeArr);
-        System.out.println(Arrays.toString(mergeArr) + "\n Done");
+        System.out.println(Arrays.toString(mergeArr) + "\n Finished");
+
+        int[] quickSortArr = InPlaceSorts.randomNum(10);
+        System.out.println(Arrays.toString(quickSortArr) + "\n Loading...");
+        InPlaceSorts.quickSort(quickSortArr,0,quickSortArr.length-1);
+        System.out.println(Arrays.toString(quickSortArr) + "\n Finished");
     }
 }
