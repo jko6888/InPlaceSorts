@@ -38,7 +38,7 @@ public class Runner {
 
         int[] quickSortArr = InPlaceSorts.randomNum(10);
         System.out.println(Arrays.toString(quickSortArr) + "\n Loading...");
-        InPlaceSorts.quickSort(quickSortArr,0,quickSortArr.length-1);
+        InPlaceSorts.quickSort(quickSortArr,0,9);
         System.out.println(Arrays.toString(quickSortArr) + "\n Finished");
     }
 }
